@@ -1,0 +1,25 @@
+<%- include('partials/header') %>
+	<h1 class="ui header">Blogs</h1>	
+	<%blogs.forEach((blog)=>{ %>
+		<div class="ui center aligned grid">	
+		<div class="row">
+			<div class="twelve wide column">
+				<div class="ui segment">
+					<img src="<%= blog.image%>" class='ui fluid centered rounded image' id='img'>
+					<a href="/blogs/<%=blog._id%>" class='ui medium header'><%= blog.title%></a>
+					<div class="ui items">
+						<div class="item">
+							<div class="meta">
+								<span><%=blog.created.toDateString() %></span>
+							</div>
+						</div>
+					</div>
+					<p><%= blog.body.substring(0, 100)%>...</p>
+					<a href="/blogs/<%= blog._id %>/">Read more</a>	
+				</div>	
+			</div>
+		</div>
+	</div>			
+	<% }) %>			
+
+<%- include('partials/footer') %>

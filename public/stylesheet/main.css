@@ -1,0 +1,16 @@
+.container {
+	margin-top: 7rem;
+	margin-bottom: 7rem;
+}
+
+#delete{
+	display: inline;
+}
+
+img{
+	margin: 1rem;
+}
+
+.ui[class*="center aligned"].grid>.row>.column {
+    text-align: left;
+}
